@@ -3,7 +3,7 @@ run: compile_and_link
 
 compile_and_link: clean
 	g++ -std=c++11 -g -Wall -I "./inc/" \
-	./src/main.cpp ./src/nutility.cpp   \
+	./src/main.cpp ./src/nutility.cpp ./src/sentence.cpp \
 	-o ./bin/exec_file
 
 clean: 

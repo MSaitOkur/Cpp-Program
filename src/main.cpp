@@ -1,4 +1,19 @@
-void func(int a = 10, int b = 20, int c = 30);
-void func(int a = 10, int b = 20, int c = 30) {} // error
+#include <iostream>
+class A
+{
+public:
+    explicit A(double val)
+    {
+        std::cout << "explicit A(double), val = " << val << '\n';
+    }
 
-int main() {}
+    A(int val)
+    {
+        std::cout << "A(int), val = " << val << '\n';
+    }
+};
+
+int main()
+{
+    A ax = 10.5; // geçerli
+}
