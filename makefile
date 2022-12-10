@@ -9,3 +9,5 @@ compile_and_link: clean
 clean: 
 	clear
 
+
+	# ./src./date.cpp
