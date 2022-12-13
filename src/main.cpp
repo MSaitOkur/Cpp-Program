@@ -1,47 +1,20 @@
-// #include <iostream>
-
-// class F;
-
-// class C {
-// public:
-// 	C() { std::cout << "C"; }
-// 	friend C F::createC();
-// };
-
-// class F {
-// public:
-// 	F() { std::cout << "F"; }
-
-// 	C createC() { return C(); }
-// };
-
-// int main() {
-// 	F f;
-// 	C c = f.createC();
-// }
-
 #include <iostream>
-
-class A;
-
-class B
-{
-public:
-    B() { std::cout << "B"; }
-
-    friend B A::createObject();
-};
-
-class A
-{
-public:
-    A() { std::cout << "A"; }
-
-    B createObject() { return B(); }
-};
+#include "fraction.hpp"
 
 int main()
 {
-    A a;
-    B b = a.createObject();
+    Fraction f1{1, 3};
+    Fraction f2{1, 3};
+    Fraction f3{2, 3};
+
+    std::cout << "f1 = " << f1 << '\n';
+    std::cout << "f2 = " << f2 << '\n';
+    std::cout << "f3 = " << f3 << '\n';
+
+    std::cout << "f1 <  f2 = " << (f1 < f2) << ", f2 <  f3 = " << (f2 < f3) << "\n";
+    std::cout << "f1 <= f2 = " << (f1 <= f2) << ", f2 <= f3 = " << (f2 <= f3) << "\n";
+    std::cout << "f1 >  f2 = " << (f1 > f2) << ", f2 >  f3 = " << (f2 > f3) << "\n";
+    std::cout << "f1 >= f2 = " << (f1 >= f2) << ", f2 >= f3 = " << (f2 >= f3) << "\n";
+    std::cout << "f1 == f2 = " << (f1 == f2) << ", f2 == f3 = " << (f2 == f3) << "\n";
+    std::cout << "f1 != f2 = " << (f1 != f2) << ", f2 != f3 = " << (f2 != f3) << "\n";
 }
