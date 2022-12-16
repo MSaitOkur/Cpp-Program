@@ -1,20 +1,52 @@
-#include <iostream>
-#include "fraction.hpp"
-
-int main()
-{
-    Fraction f1{1, 3};
-    Fraction f2{1, 3};
-    Fraction f3{2, 3};
-
-    std::cout << "f1 = " << f1 << '\n';
-    std::cout << "f2 = " << f2 << '\n';
-    std::cout << "f3 = " << f3 << '\n';
-
-    std::cout << "f1 <  f2 = " << (f1 < f2) << ", f2 <  f3 = " << (f2 < f3) << "\n";
-    std::cout << "f1 <= f2 = " << (f1 <= f2) << ", f2 <= f3 = " << (f2 <= f3) << "\n";
-    std::cout << "f1 >  f2 = " << (f1 > f2) << ", f2 >  f3 = " << (f2 > f3) << "\n";
-    std::cout << "f1 >= f2 = " << (f1 >= f2) << ", f2 >= f3 = " << (f2 >= f3) << "\n";
-    std::cout << "f1 == f2 = " << (f1 == f2) << ", f2 == f3 = " << (f2 == f3) << "\n";
-    std::cout << "f1 != f2 = " << (f1 != f2) << ", f2 != f3 = " << (f2 != f3) << "\n";
-}
+// //=======================================
+// //=======================================
+// #include <iostream>
+// class Base
+// {
+// public:
+//     void func(int);
+// };
+// class Der : public Base
+// {
+// public:
+//     void func(double);
+// };
+// class DerDer : public Der
+// {
+// public:
+//     void func(long);
+// };
+// // DerDer için, Der direct base class
+// // DerDer için, Base indirect base class
+// //=======================================
+// //=======================================
+// #include <iostream>
+// class Base
+// {
+// public:
+//     void func(int)
+//     {
+//         std::cout << "Base::func(int) \n";
+//     }
+// };
+// class Der : public Base
+// {
+// public:
+//     void func()
+//     {
+//         std::cout << "Der::func() \n";
+//     }
+//     void func(int x)
+//     { // Forwarding Function
+//         Base::func(x);
+//     }
+// };
+// int main()
+// {
+//     Der mder;
+//     mder.func(12); // Forwarding Function Call
+//     mder.func();
+//     186
+// }
+// //=======================================
+// //=======================================
