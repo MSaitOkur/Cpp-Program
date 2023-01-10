@@ -255,39 +255,39 @@ public:
 private:
 };
 
-inline Car* create_random_car()
-{
-    static std::mt19937 eng{std::random_device{}()};
-    static std::uniform_int_distribution<> dist{0, 6};
+// inline Car* create_random_car()
+// {
+//     static std::mt19937 eng{std::random_device{}()};
+//     static std::uniform_int_distribution<> dist{0, 6};
 
-    switch(dist(eng)){
-        case 0: std::cout << "Mercedes case\n";      return new Mercedes;
-        case 1: std::cout << "Mercedes_S500 case\n"; return new Mercedes_S500;
-        case 2: std::cout << "Audi case\n";          return new Audi;
-        case 3: std::cout << "Fiat case\n";          return new Fiat;
-        case 4: std::cout << "Bmw case\n";           return new Bmw;
-        case 5: std::cout << "Reanult case\n";       return new Renault;
-        case 6: std::cout << "Volvo case\n";         return new Volvo;
-        default: return nullptr;
-    }
+//     switch(dist(eng)){
+//         case 0: std::cout << "Mercedes case\n";      return new Mercedes;
+//         case 1: std::cout << "Mercedes_S500 case\n"; return new Mercedes_S500;
+//         case 2: std::cout << "Audi case\n";          return new Audi;
+//         case 3: std::cout << "Fiat case\n";          return new Fiat;
+//         case 4: std::cout << "Bmw case\n";           return new Bmw;
+//         case 5: std::cout << "Reanult case\n";       return new Renault;
+//         case 6: std::cout << "Volvo case\n";         return new Volvo;
+//         default: return nullptr;
+//     }
 
-}
+// }
 
-inline std::unique_ptr<Car> create_unique_random_car()
-{
-    static std::mt19937 eng{std::random_device{}()};
-    static std::uniform_int_distribution<int> dist{0, 6};
+// inline std::unique_ptr<Car> create_unique_random_car()
+// {
+//     static std::mt19937 eng{std::random_device{}()};
+//     static std::uniform_int_distribution<int> dist{0, 6};
 
-    switch(dist(eng)){
-        case 0: std::cout << "Mercedes case\n";      return std::make_unique<Mercedes>();
-        case 1: std::cout << "Mercedes_S500 case\n"; return std::make_unique<Mercedes_S500>();
-        case 2: std::cout << "Audi case\n";          return std::make_unique<Audi>();
-        case 3: std::cout << "Fiat case\n";          return std::make_unique<Fiat>();
-        case 4: std::cout << "Bmw case\n";           return std::make_unique<Bmw>();
-        case 5: std::cout << "Reanult case\n";       return std::make_unique<Renault>();
-        case 6: std::cout << "Volvo case\n";         return std::make_unique<Volvo>();
-        default: return nullptr;
-    }
-}
+//     switch(dist(eng)){
+//         case 0: std::cout << "Mercedes case\n";      return std::make_unique<Mercedes>();
+//         case 1: std::cout << "Mercedes_S500 case\n"; return std::make_unique<Mercedes_S500>();
+//         case 2: std::cout << "Audi case\n";          return std::make_unique<Audi>();
+//         case 3: std::cout << "Fiat case\n";          return std::make_unique<Fiat>();
+//         case 4: std::cout << "Bmw case\n";           return std::make_unique<Bmw>();
+//         case 5: std::cout << "Reanult case\n";       return std::make_unique<Renault>();
+//         case 6: std::cout << "Volvo case\n";         return std::make_unique<Volvo>();
+//         default: return nullptr;
+//     }
+// }
 
 #endif // CAR_H

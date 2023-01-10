@@ -1,13 +1,10 @@
 run: compile_and_link
-	./bin/exec_file
+	./test
 
 compile_and_link: clean
 	g++ -std=c++17 -g -Wall -I "./inc/" \
 	./src/main.cpp ./src/nutility.cpp \
-	-o ./bin/exec_file
+	-o test
 
 clean: 
 	clear
-
-
-	# ./src./date.cpp
